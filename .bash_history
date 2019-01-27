@@ -97,3 +97,13 @@ g++ matprint.cpp -o print.cpp
 cd matrices
 g++ matprint.cpp -o print
 git
+pwd
+cd proizv_summa
+g++ matrices.cpp -o matrice.exe
+g++ matrices.cpp -o matrice.exe
+./matrice.exe
+g++ matrices.cpp -o matrice.exe
+./matrice.exe
+g++ matrices.cpp -o matrice.exe
+./matrice.exe
+./matrice.exe

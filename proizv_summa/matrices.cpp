@@ -57,15 +57,16 @@ int* matsumm(int N, int M, int *arr1, int *arr2){
 }
 
 int* matproizv(int N, int M, int *arr1, int N1, int M1, int *arr2){
-	int i, j;
+	int i, j, k;
 	int *res = new int[N * M];
 	
 	if(N == M1){
 		for(i = 0; i < M; i++){
 			for(j = 0; j < N; j++){
-				res[j + N * i] = arr1[j + N * i] * arr2[j * N + i];
-				if(res[j + N * i] < 0)
-					printf("%d\n", arr2[j * N + i]);
+				res[j + N * i] = 0;
+				for(k = 0; k < N; k++){
+					res[j + N * i] += arr1[k + N * i] * arr2[j + k * N];
+				}
 			}
 		}
 	}
